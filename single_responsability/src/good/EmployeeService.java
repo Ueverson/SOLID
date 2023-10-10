@@ -5,16 +5,22 @@ import model.Employee;
 import util.FunctionType;
 
 public class EmployeeService {
+	
+	EmployeeRepository employeeRepository;
+	
+	public EmployeeService(EmployeeRepository employeeRepository) {
+		this.employeeRepository = employeeRepository;
+	}
 
 	public Employee createEmployee(String name, FunctionType function, Double wage) {
 		Employee employee =new Employee(name, function, wage);
-		saveEmployeed(employee);
+		employeeRepository.saveEmployeed(employee);
 		return employee;
 	}
 
 	public Employee changeNameEmployee(Employee employee, String newName) {
 		employee.setName(newName);
-		saveEmployeed(employee);
+		employeeRepository.saveEmployeed(employee);
 		return employee;
 	}
 }

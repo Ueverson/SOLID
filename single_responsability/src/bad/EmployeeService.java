@@ -6,14 +6,14 @@ import util.FunctionType;
 public class EmployeeService {
 
 	public Employee createEmployee(String name, FunctionType function, Double wage) {
-		Employee employee =new Employee(name, function, wage);
-		saveEmployeed(employee);
+		Employee employee = new Employee(name, function, wage);
+		saveEmployeedBD(employee);
 		return employee;
 	}
 
 	public Employee changeNameEmployee(Employee employee, String newName) {
 		employee.setName(newName);
-		saveEmployeed(employee);
+		saveEmployeedBD(employee);
 		return employee;
 	}
 
@@ -28,11 +28,11 @@ public class EmployeeService {
 			wage += 10000;
 		}
 
-		saveEmployeed(employee);
+		saveEmployeedBD(employee);
 		return wage;
 	}
 
-	public void saveEmployeed(Employee employee) {
+	public void saveEmployeedBD(Employee employee) {
 		System.out.print(employee.getName().concat(" was saved"));
 	}
 

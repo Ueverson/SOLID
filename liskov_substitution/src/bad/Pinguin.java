@@ -6,4 +6,9 @@ public class Pinguin extends Ave {
 	public void fly() {
 		throw new UnsupportedOperationException("Pinguins não podem voar");
 	}
+	
+	@Override
+	public void mate() {
+        System.out.println("o Pinguin está acasalando");
+    }
 }

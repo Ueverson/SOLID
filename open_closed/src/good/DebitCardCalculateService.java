@@ -1,7 +1,5 @@
 package good;
 
-import util.PaymentType;
-
 public class DebitCardCalculateService implements CalculateService {
 
 	@Override

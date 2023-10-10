@@ -4,11 +4,11 @@ public class MensagemService {
 
 	private ServicoDeMensagem servicoDeMensagem;
 
-    public MensagemService() {
-        this.servicoDeMensagem = new EmailService();
+    public MensagemService(ServicoDeMensagem servicoDeMensagem) {
+        this.servicoDeMensagem = servicoDeMensagem;
     }
 
-    public void enviarMensagem(String mensagem, String destinatario) {
-    	servicoDeMensagem.enviarMensagem(mensagem, destinatario);
+    public void enviarMensagem() {
+    	servicoDeMensagem.enviarMensagem();
     }
 }
