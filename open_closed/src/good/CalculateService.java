@@ -4,5 +4,5 @@ import util.PaymentType;
 
 public interface CalculateService {
 
-	public double calculateValuePayment(PaymentType paymentType, double valuePurchase);
+	public double calculateValuePayment(double valuePurchase);
 }
